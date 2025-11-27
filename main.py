@@ -168,7 +168,7 @@ def delete_product(product_id: str):
     except ClientError as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-
+#test
 
 
 @app.post("/addresses")

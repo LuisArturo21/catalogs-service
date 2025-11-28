@@ -24,7 +24,7 @@ TABLE_ADDRESSES = dynamodb.Table(os.getenv("TABLE_ADDRESSES", "Addresses"))
 def send_metric(name, value, unit='Count'):
     """Envía métricas a CloudWatch solo si NO estamos en local"""
     if ENV == 'local':
-        print(f"📊 [METRIC - {ENV}] {name}: {value} {unit}")
+        print(f" [METRIC - {ENV}] {name}: {value} {unit}")
         return
 
     try:
